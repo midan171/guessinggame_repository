@@ -10,7 +10,7 @@ read guess
 
 #function for cheching the guess
 function check_guess(){
-	local num=$(cat guessinggame.sh | wc -l)
+	local num=$(ls -al| grep '^-' | wc -l)
 	if [ $1 -eq $num ]
 	then
 		echo "correct!!!"
